@@ -3,7 +3,6 @@ package sg.edu.nus.webjpah2.repo;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import sg.edu.nus.webjpah2.model.User;
 

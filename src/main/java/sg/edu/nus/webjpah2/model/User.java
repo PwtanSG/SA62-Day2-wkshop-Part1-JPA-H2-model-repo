@@ -1,6 +1,7 @@
 package sg.edu.nus.webjpah2.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -38,7 +39,7 @@ public class User {
 	private String lastName;
 	private LocalDate dob;
 	@DateTimeFormat
-	private LocalDate createdAt;
+	private LocalDateTime createdAt;
 
 	public User() {
 		super();
@@ -51,7 +52,7 @@ public class User {
 	}
 //				("Ah beng", "password", "ahbeng@email.com", "AH", "Beng", dob, LocalDate.now());
 	public User(String username, String password, String email, String firstName, String lastName, LocalDate dob,
-			LocalDate createdDate) {
+			LocalDateTime createdDate) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -86,17 +87,17 @@ public class User {
 		this.password = password;
 	}
 
-	public LocalDate getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(LocalDate createdAt) {
+	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", createdAt=" + createdAt
+		return "User [id=" + id + ", username=" + username + ", password=" + password +  ", dob:" + dob + " createdAt=" + createdAt
 				+ "]";
 	}
 

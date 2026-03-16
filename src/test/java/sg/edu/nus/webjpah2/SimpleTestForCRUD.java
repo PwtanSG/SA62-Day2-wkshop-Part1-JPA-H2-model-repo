@@ -1,6 +1,7 @@
 package sg.edu.nus.webjpah2;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +29,7 @@ public class SimpleTestForCRUD {
 	public void setUp() {
 		// Create and persist test data
 		User u2 = new User("Ah Beng", "12345678", "ahBeng@email.com", "AH", "Beng", LocalDate.of(2022, 1, 1),
-				LocalDate.now());
+				LocalDateTime.now());
 		User saveUser = userRepo.save(u2);
 		em.persist(saveUser);
 		em.flush();
