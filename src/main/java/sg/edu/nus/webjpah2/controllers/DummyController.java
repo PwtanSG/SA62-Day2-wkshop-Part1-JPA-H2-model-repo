@@ -32,18 +32,18 @@ public class DummyController {
 		User u2 = new User("Ah Seng", "password12345", "ahSeng@email.com", "AH", "Seng", dob, createdDate);
 		uRepo.save(u2);
 		System.out.println(param);
-		return "test: " + param ;
+		return new String(param);
 	}
 
 	@GetMapping("/test1")
 	public String test() {
 		Category c1 = new Category("Kitchen knive", "Simple home knife");
 		cRepo.save(c1);
-		LocalDate dob =  LocalDate.of(2022, 1, 1);
-		LocalDate createdDate = LocalDate.now();
+//		LocalDate dob =  LocalDate.of(2022, 1, 1);
+//		LocalDate createdDate = LocalDate.now();
 //		User u1 = new User("Ah beng", "password", "ahbeng@email.com", "AH", "Beng", dob, createdDate);
 //		uRepo.save(u1);
-		User u2 = new User("Ah Seng", "password12345", "ahSeng@email.com", "AH", "Seng", dob, createdDate);
+		User u2 = new User("Ah Seng", "password12345", "ahSeng@email.com", "AH", "Seng", LocalDate.of(2022, 1, 1),  LocalDate.now());
 		uRepo.save(u2);
 		return "testing completed";
 	}

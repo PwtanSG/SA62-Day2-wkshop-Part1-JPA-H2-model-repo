@@ -1,7 +1,6 @@
 package sg.edu.nus.webjpah2.model;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 import org.springframework.format.annotation.DateTimeFormat;
